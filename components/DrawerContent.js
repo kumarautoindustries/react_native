@@ -8,9 +8,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const DrawerList = [
   { icon: 'home-outline', label: 'Home', navigateTo: 'Home' },
-  { icon: 'account-multiple', label: 'Profile', navigateTo: 'Profile' },
+  { icon: 'account-multiple', label: 'Setting', navigateTo: 'Setting' },
   { icon: 'account-group', label: 'User', navigateTo: 'User' },
-  { icon: 'bookshelf', label: 'Library', navigateTo: '' },
+  { icon: 'bookshelf', label: 'Notifications', navigateTo: 'Notifications' },
 ];
 const DrawerLayout = ({ icon, label, navigateTo }) => {
   const navigation = useNavigation();
@@ -54,9 +54,9 @@ function DrawerContent(props) {
                   style={{ marginTop: 5 }}
                 />
                 <View style={{ marginLeft: 10, flexDirection: 'column' }}>
-                  <Title style={styles.title}>Adarsh</Title>
+                  <Title style={styles.title}>Rakesh Nigam</Title>
                   <Text style={styles.caption} numberOfLines={1}>
-                    adarshthakur210@gmail.com
+                    rnigam28@gmail.com
                   </Text>
                 </View>
               </View>
