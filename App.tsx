@@ -11,12 +11,12 @@ import NotificationsScreen from './components/screens/NotificationsScreen';
 import DrawerContent from "./components/DrawerContent";
 import Icon from 'react-native-vector-icons/Entypo';
 
-const StackNav = () => {
-  const Stack = createNativeStackNavigator();
+
+const DrawerNav = () => {
+  const Drawer = createDrawerNavigator();
   const navigation = useNavigation();
   return (
-    <Stack.Navigator screenOptions={{
-      statusBarColor: '#157ed2',
+    <Drawer.Navigator screenOptions={{
       headerStyle: {
         backgroundColor: '#157ed2',
       },
@@ -32,19 +32,11 @@ const StackNav = () => {
           />
         );
       },
-    }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Notifications" component={NotificationsScreen} />
-      <Stack.Screen name="Setting" component={SettingScreen} />
-      <Stack.Screen name="User" component={UserScreen} />
-    </Stack.Navigator >
-  )
-}
-const DrawerNav = () => {
-  const Drawer = createDrawerNavigator();
-  return (
-    <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />} screenOptions={{ headerShown: false }}>
-      <Drawer.Screen name="Home" component={StackNav} />
+    }} drawerContent={(props) => <DrawerContent {...props} />} >
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+      <Drawer.Screen name="Setting" component={SettingScreen} />
+      <Drawer.Screen name="User" component={UserScreen} />
     </Drawer.Navigator >
   )
 }
